@@ -22,11 +22,11 @@
         {% for board in boards %}
           <tr>
             <td>
-              {{ board.name }}<br>
-              <small style="color: #888">{{ board.description }}</small>
+              <a href="{% url 'board_topics' board.pk %}">{{ board.name }}</a>
+              <small class="text-muted d-block">{{ board.description }}</small>
             </td>
-            <td>0</td>
-            <td>0</td>
+            <td class="align-middle">0</td>
+            <td class="align-middle">0</td>
             <td></td>
           </tr>
         {% endfor %}
